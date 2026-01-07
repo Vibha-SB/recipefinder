@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipe Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Top navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand-title">Recipe Finder</div>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p id="greetingText" class="hero-kicker">Welcome to Recipe Finder</p>
+          <h1>
+            Cook Anything.<br />
+            Start With What You Have.
+          </h1>
+          <p class="hero-sub">
+            Search recipes from around the world, explore cuisines, and
+            discover ideas based on the ingredients already in your kitchen.
+          </p>
+
+          <form id="searchForm" class="hero-search">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search a recipe or ingredient…"
+              autocomplete="off"
+            />
+            <button type="submit">Search</button>
+          </form>
+
+          <p id="searchStatus" class="hero-status">
+            Try something like “pasta”, “paneer tikka” or “eggless cake”.
+          </p>
+
+          <button id="randomBtn" type="button" class="hero-button">
+            Random recipe idea
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard: Recipe of the Day + small stats -->
+    <section id="dashboard" class="section dark-section">
+      <div class="container">
+        <h2 class="section-title">Today in Recipe Finder</h2>
+
+        <div class="dashboard-layout">
+          <!-- Big feature card -->
+          <article class="day-feature">
+            <div class="day-image-wrapper">
+              <img
+                id="dayImage"
+                src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Recipe of the day"
+                loading="lazy"
+              />
+              <span class="day-badge">Recipe of the Day</span>
+            </div>
+            <div class="day-body">
+              <h3 id="dayTitle">One-Pot Veggie Pasta</h3>
+              <p id="dayDesc">
+                A quick, comforting dinner made in a single pot with vegetables,
+                garlic and herbs.
+              </p>
+              <div id="dayTags" class="day-tags">
+                <span>30 mins</span>
+                <span>One pot</span>
+                <span>Beginner friendly</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Side mini stats (simpler, not like your friend’s) -->
+          <div class="stat-column">
+            <div class="stat-card mini">
+              <div class="stat-icon">🧾</div>
+              <div class="stat-number" id="statSaved">58</div>
+              <div class="stat-label">Times Saved</div>
+            </div>
+
+            <div class="stat-card mini">
+              <div class="stat-icon">❤️</div>
+              <div class="stat-number" id="statLikes">4.9</div>
+              <div class="stat-label">User Rating</div>
+            </div>
+
+            <div class="stat-card mini">
+              <div class="stat-icon">⏱️</div>
+              <div class="stat-number" id="statTime">25</div>
+              <div class="stat-label">Avg. Cook Time (min)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular recipes -->
+    <section id="menu" class="section dark-section">
+      <div class="container">
+        <h2 class="section-title">Popular Recipes</h2>
+
+        <div class="card-grid">
+          <article class="recipe-card">
+            <img
+              src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Bowl of creamy pasta"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Creamy Garlic Pasta</h3>
+              <p>Silky white sauce with garlic, herbs and parmesan.</p>
+              <span class="card-meta">Ready in 20 minutes</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <img
+              src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Indian curry with rice"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Butter Paneer Curry</h3>
+              <p>Rich tomato gravy with soft paneer cubes & warm spices.</p>
+              <span class="card-meta">Comfort • Indian</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <img
+              src="https://images.pexels.com/photos/4109990/pexels-photo-4109990.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Chocolate cake with berries"
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>Warm Chocolate Lava Cake</h3>
+              <p>Soft chocolate cake with a gooey center and fresh berries.</p>
+              <span class="card-meta">Dessert • Party favourite</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simple contact placeholder -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-inner">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p class="contact-text">
+           Contact us at:
+          </p>
+        </div>
+        <div class="contact-details">
+          <p>Email: recipefinder@example.com</p>
+          <p>Phone: +91 XXXXX XXXXX</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Recipe Finder</span>
+      <span>HTML • CSS • JavaScript</span>
+    </div>
+  </footer>
+</body>
+</html>
