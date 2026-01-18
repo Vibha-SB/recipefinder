@@ -5,8 +5,9 @@
   <title>Recipe Finder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
+
 <body>
   <!-- Top navigation -->
   <header class="navbar">
@@ -29,27 +30,29 @@
       <div class="container hero-content">
         <div class="hero-text">
           <p id="greetingText" class="hero-kicker">Welcome to Recipe Finder</p>
+
           <h1>
             Cook Anything.<br />
             Start With What You Have.
           </h1>
+
           <p class="hero-sub">
-            Search recipes from around the world, explore cuisines, and
-            discover ideas based on the ingredients already in your kitchen.
+            Search recipes from around the world, explore cuisines, and discover
+            ideas based on the ingredients already in your kitchen.
           </p>
 
           <form id="searchForm" class="hero-search">
             <input
               type="text"
               id="searchInput"
-              placeholder="Search a recipe or ingredient…"
+              placeholder="Search a recipe… (try: pasta, paneer, noodles, lava cake)"
               autocomplete="off"
             />
             <button type="submit">Search</button>
           </form>
 
           <p id="searchStatus" class="hero-status">
-            Try something like “pasta”, “paneer tikka” or “eggless cake”.
+            Tip: Search works only for the 4 recipes available in the menu.
           </p>
 
           <button id="randomBtn" type="button" class="hero-button">
@@ -59,38 +62,43 @@
       </div>
     </section>
 
-    <!-- Dashboard: Recipe of the Day + small stats -->
+    <!-- Dashboard -->
     <section id="dashboard" class="section dark-section">
       <div class="container">
         <h2 class="section-title">Today in Recipe Finder</h2>
 
         <div class="dashboard-layout">
           <!-- Big feature card -->
-          <article class="day-feature">
-            <div class="day-image-wrapper">
-              <img
-                id="dayImage"
-                src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Recipe of the day"
-                loading="lazy"
-              />
-              <span class="day-badge">Recipe of the Day</span>
-            </div>
-            <div class="day-body">
-              <h3 id="dayTitle">One-Pot Veggie Pasta</h3>
-              <p id="dayDesc">
-                A quick, comforting dinner made in a single pot with vegetables,
-                garlic and herbs.
-              </p>
-              <div id="dayTags" class="day-tags">
-                <span>30 mins</span>
-                <span>One pot</span>
-                <span>Beginner friendly</span>
+          <a id="dayLink" class="day-link" href="creamy-garlic-pasta.html">
+            <article class="day-feature">
+              <div class="day-image-wrapper">
+                <img
+                  id="dayImage"
+                  src="./C:\Users\DELL\OneDrive\Desktop\Recipe Finder Final\choco_cake.jfi"
+                  alt="Recipe of the day"
+                  loading="lazy"
+                />
+                <span class="day-badge">Recipe of the Day</span>
               </div>
-            </div>
-          </article>
 
-          <!-- Side mini stats (simpler, not like your friend’s) -->
+              <div class="day-body">
+                <h3 id="dayTitle">Creamy Garlic Pasta</h3>
+                <p id="dayDesc">
+                  A quick, comforting dinner with garlic, cream and herbs.
+                </p>
+
+                <div id="dayTags" class="day-tags">
+                  <span>20 mins</span>
+                  <span>Italian</span>
+                  <span>Beginner friendly</span>
+                </div>
+
+                <div class="day-cta">Click to see full recipe →</div>
+              </div>
+            </article>
+          </a>
+
+          <!-- Side mini stats -->
           <div class="stat-column">
             <div class="stat-card mini">
               <div class="stat-icon">🧾</div>
@@ -114,65 +122,122 @@
       </div>
     </section>
 
-    <!-- Popular recipes -->
+    <!-- Menu -->
     <section id="menu" class="section dark-section">
       <div class="container">
         <h2 class="section-title">Popular Recipes</h2>
 
         <div class="card-grid">
-          <article class="recipe-card">
-            <img
-              src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Bowl of creamy pasta"
-              loading="lazy"
-            />
-            <div class="card-body">
-              <h3>Creamy Garlic Pasta</h3>
-              <p>Silky white sauce with garlic, herbs and parmesan.</p>
-              <span class="card-meta">Ready in 20 minutes</span>
-            </div>
-          </article>
+          <!-- 1 -->
+          <a class="recipe-link" href="creamy-garlic-pasta.html" data-key="pasta garlic creamy">
+            <article class="recipe-card">
+              <img
+                src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Bowl of creamy pasta"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3>Creamy Garlic Pasta</h3>
+                <p>Silky white sauce with garlic, herbs and parmesan.</p>
 
-          <article class="recipe-card">
-            <img
-              src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Indian curry with rice"
-              loading="lazy"
-            />
-            <div class="card-body">
-              <h3>Butter Paneer Curry</h3>
-              <p>Rich tomato gravy with soft paneer cubes & warm spices.</p>
-              <span class="card-meta">Comfort • Indian</span>
-            </div>
-          </article>
+                <div class="card-stats">
+                  <span>❤️ 1.2k</span>
+                  <span>🔖 420</span>
+                  <span>⏱️ 20m</span>
+                </div>
 
-          <article class="recipe-card">
-            <img
-              src="https://images.pexels.com/photos/4109990/pexels-photo-4109990.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Chocolate cake with berries"
-              loading="lazy"
-            />
-            <div class="card-body">
-              <h3>Warm Chocolate Lava Cake</h3>
-              <p>Soft chocolate cake with a gooey center and fresh berries.</p>
-              <span class="card-meta">Dessert • Party favourite</span>
-            </div>
-          </article>
+                <span class="card-meta"><span class="flag-badge">IT</span> Italian</span>
+             
+              </div>
+            </article>
+          </a>
+
+          <!-- 2 -->
+          <a class="recipe-link" href="butter-paneer-curry.html" data-key="paneer butter curry indian">
+            <article class="recipe-card">
+              <img
+                src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Indian curry with rice"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3>Butter Paneer Curry</h3>
+                <p>Rich tomato gravy with soft paneer cubes & warm spices.</p>
+
+                <div class="card-stats">
+                  <span>❤️ 980</span>
+                  <span>🔖 310</span>
+                  <span>⏱️ 30m</span>
+                </div>
+
+               <span class="card-meta"><span class="flag-badge">IN</span> Indian</span>
+               
+              </div>
+            </article>
+          </a>
+
+          <!-- 3 -->
+          <a class="recipe-link" href="veg-stir-fry-noodles.html" data-key="noodles stir fry chinese">
+            <article class="recipe-card">
+              <img
+                src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Noodles in a pan"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3>Veg Stir-Fry Noodles</h3>
+                <p>Colorful veggies tossed with noodles, soy sauce and garlic.</p>
+
+                <div class="card-stats">
+                  <span>❤️ 760</span>
+                  <span>🔖 255</span>
+                  <span>⏱️ 20m</span>
+                </div>
+
+             <span class="card-meta"><span class="flag-badge">CN</span> Chinese</span>
+                           
+            </article>
+          </a>
+
+          <!-- 4 -->
+          <a class="recipe-link" href="warm-chocolate-lava-cake.html" data-key="lava cake chocolate dessert">
+            <article class="recipe-card">
+              <img
+                src="C:\Users\DELL\OneDrive\Desktop\Recipe Finder Final\front end files\choco_cake.jfif"
+                alt="Chocolate lava cake"
+                loading="lazy"
+              />
+              <div class="card-body">
+                <h3>Warm Chocolate Lava Cake</h3>
+                <p>Soft cake with a gooey chocolate center. Quick dessert!</p>
+
+                <div class="card-stats">
+                  <span>❤️ 1.4k</span>
+                  <span>🔖 610</span>
+                  <span>⏱️ 15m</span>
+                </div>
+
+                <span class="card-meta"><span class="flag-badge">US</span> American</span>
+               
+              </div>
+            </article>
+          </a>
         </div>
+
+        <p class="menu-note" id="menuNote"></p>
       </div>
     </section>
 
-    <!-- Simple contact placeholder -->
+    <!-- Contact -->
     <section id="contact" class="section contact-section">
       <div class="container contact-inner">
         <div>
           <h2 class="section-title">Contact</h2>
-          <p class="contact-text">
-           Contact us at:
-          </p>
+          <p class="contact-text">Contact us at:</p>
         </div>
         <div class="contact-details">
           <p>Email: recipefinder@example.com</p>
+          <br>
           <p>Phone: +91 XXXXX XXXXX</p>
         </div>
       </div>
@@ -182,7 +247,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>Recipe Finder</span>
-      <span>HTML • CSS • JavaScript</span>
+      <span>RWL Mini Project</span>
     </div>
   </footer>
 </body>
