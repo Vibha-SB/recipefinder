@@ -141,7 +141,7 @@ function setRecipeOfDay() {
 
   dayTitle.textContent = item.title;
   dayDesc.textContent = item.desc;
-  dayImage.src = item.img;
+  dayImage.src = "https://raw.githubusercontent.com/Vibha-SB/recipefinder/refs/heads/main/choco_cake.jfif";
   dayLink.href = item.href;
 
   dayTags.innerHTML = "";
@@ -159,4 +159,5 @@ function setRecipeOfDay() {
   if (statTime) statTime.textContent = String(item.time);
 }
 setRecipeOfDay();
+
 
