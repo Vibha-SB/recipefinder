@@ -125,8 +125,8 @@ const dayOptions = [
     title: "Warm Chocolate Lava Cake",
     desc: "Soft cake with a gooey chocolate center. Quick dessert!",
     tags: ["15 mins", "American", "Easy"],
-    img: "./choco_cake.jfif",
-    href: "warm-chocolate-lava-cake.html",
+    img: "./C:\Users\DELL\OneDrive\Desktop\Recipe Finder Final\front end files\choco_cake.jfif",
+    href: "recipe codes\warm-chocolate-lava-cake.html",
     saved: 610,
     rating: 4.9,
     time: 15,
@@ -141,8 +141,9 @@ function setRecipeOfDay() {
 
   dayTitle.textContent = item.title;
   dayDesc.textContent = item.desc;
-  dayImage.src = "https://raw.githubusercontent.com/Vibha-SB/recipefinder/refs/heads/main/choco_cake.jfif";
-  dayLink.href = item.href;
+  dayImage.src = item.img;
+  const dayLink = document.getElementById("dayLink");
+if(dayLnk) datLink.href = "recipes/warm-chocolate-lava-cake.html";
 
   dayTags.innerHTML = "";
   item.tags.forEach((t) => {
@@ -159,5 +160,4 @@ function setRecipeOfDay() {
   if (statTime) statTime.textContent = String(item.time);
 }
 setRecipeOfDay();
-
 
